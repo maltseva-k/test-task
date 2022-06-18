@@ -692,30 +692,6 @@ font-size: 80%;
     height: 250px !important;
 
   }
-  /*
-  .object__card--horizontal {
-    width: 772px;
-    height: 250px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: none;
-    box-shadow: none;
-  }
-  .container .row .card__information {
-    width: 474px!important;
-  }
-
-  .card_foto, #card_foto, .object__card__conteiner .v-responsive__content, .object__card__conteiner .v-image__image, .object__card__conteiner .v-image__image--cover {
-    width: 296px !important;
-    height: 250px !important;
-
-  }
-
-  .card__information {
-    width: 474px!important;
-    height: 250px!important;
-
-  } */
   .card__information .v-responsive__content, .card__information .v-image__image, .card__information .v-image__image--cover {
     width: 16px!important;
     height: 16px!important;

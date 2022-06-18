@@ -110,8 +110,7 @@ footer .row ul {
   padding-left: 0;
   margin-left: auto;
   margin-right: auto;
-  /*
-  margin: 22px 1041px 14px 1041px;*/
+
 }
 
 .footer-nav li {
