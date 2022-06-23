@@ -22,17 +22,14 @@
             </v-btn>
           </v-row>
           <v-row class="pagination">
-            <v-list>
-              <v-list-item>
-                <v-icon color="#AFAFB0">mdi-chevron-left</v-icon>
-              </v-list-item>
-              <v-list-item> 1 </v-list-item>
-              <v-list-item> 2 </v-list-item>
-              <v-list-item> 3 </v-list-item>
-              <v-list-item>
-                <v-icon color="#AFAFB0">mdi-chevron-right</v-icon>
-              </v-list-item>
-            </v-list>
+              <v-pagination
+                v-model="page"
+                :length="3"
+                :total-visible="3"
+                circle
+                color="#00ACA2"
+                text-color="white"
+              ></v-pagination>
           </v-row>
         </v-list>
       </v-col>
@@ -62,7 +59,9 @@ export default {
   components: { SearchMap, ObjectCard },
   layout: 'search',
   data() {
-    return {}
+    return {
+        page: 1,
+    }
   },
   computed: {},
   mounted() {
@@ -82,6 +81,21 @@ export default {
 </script>
 
 <style scoped>
+
+.v-pagination__item {
+  background: transparent!important;
+  color: #37373A!important;
+  box-shadow: none;
+}
+.pagination {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 20px;
+}
+
 .search__container {
   height: calc(100vh - 64px);
 }
@@ -116,40 +130,6 @@ export default {
 
 .v-list-item {
   padding: 0;
-}
-
-.pagination .v-list {
-  display: flex;
-  background-color: transparent;
-  justify-content: space-between;
-  width: 198px;
-  height: 34px;
-  margin: 20px auto 26px 300px;
-  padding: 0;
-}
-
-.pagination .v-list .v-list-item {
-  border-radius: 50%;
-  max-width: 34px;
-  max-height: 34px;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 34px;
-  min-width: 34px;
-  color: #37373A;
-}
-.pagination .v-list .v-list-item:first-child {
-  opacity: 0.85;
-}
-.pagination .v-list .v-list-item:last-child {
-  opacity: 1;
-}
-
-.pagination .v-list .v-list-item:nth-child(2) {
-  background-color: #00ACA2;
-  color: #D7D7D8;
 }
 
 @media screen and (max-width: 320px) {
