@@ -1,12 +1,13 @@
 <template>
 
-      <v-app-bar
+      <v-toolbar-items
+        elevation="0"
+        width="100%"
         color="#EBEBEC"
-        fixed
-        height="180px"
-        id="app__header"
+        class="header-search"
+
       >
-        <div class="header-search">
+
           <v-btn
             width="64px"
             height="49px"
@@ -102,9 +103,9 @@
             </v-btn>
           </div>
 
-        </div>
 
-        <div class="header-filters">
+
+<!--        <div class="header-filters">
           <div class="header__select">
             <v-btn width="200px" height="56px"
                    color="#FFFBF9"
@@ -227,8 +228,8 @@
             <span class="check_filters_amount">3</span>
           </v-btn>
 
-        </div>
-      </v-app-bar>
+        </div>-->
+      </v-toolbar-items>
 
 
 

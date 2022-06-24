@@ -1,8 +1,18 @@
 <template>
   <v-app light>
-    <base-header
-      search />
-<!--    <full-search-form></full-search-form>-->
+    <v-app-bar
+      color="#EBEBEC"
+      fixed
+      width="100%"
+      height="180px"
+      elevation="0"
+      flex
+      id="app__header">
+      <base-header
+        search />
+      <full-search-form></full-search-form>
+    </v-app-bar>
+
     <v-main app class="pa0">
       <Nuxt />
     </v-main>
@@ -41,11 +51,11 @@
 </template>
 
 <script>
-/* import FullSearchForm from '../components/forms/search/FullSearchForm' */
+import FullSearchForm from '../components/forms/search/FullSearchForm'
 import BaseHeader from './includes/BaseHeader'
 export default {
   name: 'SearchLayout',
-  components: { BaseHeader },
+  components: { BaseHeader, FullSearchForm},
   data() {
     return {
       clipped: false,
@@ -77,6 +87,14 @@ export default {
 }
 </script>
 <style>
+.v-toolbar__content, .v-toolbar__extension{
+
+  display: flex!important;
+  flex-direction: column!important;
+  padding: 0;
+
+
+}
 
 footer {
   background-color: #EBEBEC;
