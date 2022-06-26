@@ -29,6 +29,7 @@
             ></v-img>
           </v-btn>
 <!--          <v-spacer />-->
+
           <div
             class="header__date__container"
             style="width: 612px; padding: 14px 12px;">
@@ -272,7 +273,7 @@ export default {
 </script>
 
 <style>
-
+/*
 .v-toolbar__content, .v-toolbar__extension{
 
   display: flex!important;
@@ -307,9 +308,9 @@ export default {
   display: grid;
   grid-template-columns: 16px 170.67px 1px 170.67px 1px 170.67px;
   gap: 12px;
-/*  display: flex;
+!*  display: flex;
   justify-content: space-between;
-  gap:0;*/
+  gap:0;*!
 
 }
 
@@ -382,7 +383,7 @@ min-width: min-content;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
+  !* identical to box height, or 150% *!
 
   letter-spacing: 0.005em;
 
@@ -394,7 +395,7 @@ min-width: min-content;
 
 .header_button-active {
   background: #E6F7F6!important;
-  /* Aquamarine/80 */
+  !* Aquamarine/80 *!
 
   border: 1px solid #33BDB5!important;
 }
@@ -713,5 +714,5 @@ min-width: min-content;
   .btn__container {
     margin-left: 1.75%;
   }
-}
+}*/
 </style>

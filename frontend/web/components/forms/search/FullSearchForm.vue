@@ -7,13 +7,13 @@
     class="header-filters"
   >
     <div class="options__wrap">
-      <div class="select__wrap">
+      <v-conteiner fluid class="select__wrap">
         <v-select
           v-model="filters.houseType"
           :items="houseTypes"
           multiple
-          chips
-          deletable-chips
+          solo
+          full-width
           label="Тип жилья"
           item-text="title"
           item-value="id"
@@ -37,8 +37,8 @@
           v-model="filters.rentalTypes"
           :items="rentalTypes"
           multiple
-          chips
-          deletable-chips
+          solo
+          full-width
           label="Тип аренды"
           item-text="title"
           item-value="id"
@@ -51,8 +51,8 @@
           v-model="filters.price"
           :items="price"
           multiple
-          chips
-          deletable-chips
+          solo
+          full-width
           label="Цена"
           item-text="title"
           item-value="id"
@@ -61,20 +61,20 @@
           class="full_search__panel__select--house-types"
         >
         </v-select>
-      </div>
-      <div class="chip__wrap">
-        <v-chip-group v-model="filters.options" active-class="active__chip" multiple class="">
+      </v-conteiner>
+      <v-sheet elevation="0" class="chip__wrap">
+        <v-chip-group v-model="filters.options" multiple class="">
           <v-chip
             v-for="item in optionsList"
             v-show="item.primary"
             :key="item.id"
-            color="white"
             :value="item.id"
+
             class="header_button"
           >{{ item.title }}
           </v-chip>
         </v-chip-group>
-    </div>
+    </v-sheet>
       <v-dialog
         v-model="advancedFiltersShow"
         persistent
@@ -83,12 +83,14 @@
       >
         <template #activator="{ on, attrs }">
           <v-btn
-            class="activator__button"
+            class="activator__button pa-4"
             text-color="#37373A"
-            color="white"
+            width="156px"
             height="56px"
+            elevation="0"
             v-bind="attrs"
             v-on="on"
+
           >
             <v-badge
               :content="filterCount"
@@ -311,7 +313,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>/*
 .v-input__slot:before {
   border: none;
 }
@@ -339,9 +341,12 @@ export default {
   color: #37373A;
 
 
-  /*width: 25%;*/
+  !*width: 25%;*!
 }
-
+.full_search__panel__select--house-types .v-input__slot:before,
+.v-input__slot:after {
+border: none!important;
+}
 .advanced_filters__v-chip.advanced_filters__house_type {
   width: 150px;
   text-align: center;
@@ -364,7 +369,7 @@ export default {
 }
 .active__chip{
   background: #E6F7F6!important;
-  /* Aquamarine/80 */
+  !* Aquamarine/80 *!
 
   border: 1px solid #33BDB5!important;
   opacity: 1;
@@ -381,7 +386,7 @@ export default {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
+  !* identical to box height, or 150% *!
 
   letter-spacing: 0.005em;
 
@@ -392,7 +397,7 @@ export default {
 }
 .header_button-active {
   background: #E6F7F6!important;
-  /* Aquamarine/80 */
+  !* Aquamarine/80 *!
 
   border: 1px solid #33BDB5!important;
 }
@@ -421,7 +426,7 @@ export default {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
+  !* identical to box height, or 150% *!
 
   letter-spacing: 0.005em;
 box-shadow: none;
@@ -432,14 +437,14 @@ box-shadow: none;
   align-self: center;
 }
 
-/*.header_button-active {
+!*.header_button-active {
   background: #E6F7F6!important;
   !* Aquamarine/80 *!
   opacity: 1!important;
   border-radius: 12px;
 
   border: 1px solid #33BDB5!important;
-}*/
+}*!
 
 .v-chip:hover,
 .activator__button:hover {
@@ -456,5 +461,5 @@ box-shadow: none;
 }
 .v-chip-group .v-slide-group__content {
    padding: 0!important;
-}
+}*/
 </style>
