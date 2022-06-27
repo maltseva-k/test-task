@@ -62,8 +62,13 @@
   display: flex;
   justify-content: space-between;
   gap: 4px!important;
-  max-width: 785px;
+  width: 100%;
+
   align-items: center;
+  @media screen and (min-width: 1920px) and (max-width: 2499px){
+    max-width: 785px;
+    overflow-x: hidden;
+  }
 
 }
 .active__chip {
@@ -217,20 +222,22 @@
   color: #37373A!important;
   border-radius: 16px!important;
   box-sizing: border-box!important;
+
 }
 .select__wrap .v-input__slot {
+  height: 54px!important;
   padding: 16px 20px!important;
   box-sizing: border-box!important;
-  border: 1px solid transparent;
   display: flex;
   justify-content: space-between;
+  border: 1px solid transparent!important;
 }
 
 .select__wrap .v-input__slot:hover {
   background: #FFFBF9;
   /* Aquamarine/60 */
 
-  border: 1px solid #66CDC7;
+  border: 1px solid #66CDC7!important;
   border-radius: 16px;
       .v-icon {
         color: #66CDC7;
@@ -250,7 +257,7 @@
   background: #FFFBF9;
   /* Aquamarine/100 */
 
-  border: 1px solid #00ACA2;
+  border: 1px solid #00ACA2!important;
   .v-icon {
     color: #00ACA2;
   }

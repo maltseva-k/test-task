@@ -1,8 +1,13 @@
 <template>
   <v-form ref="search" v-model="valid" lazy-validation @submit.prevent="submit">
     <v-row>
-      <v-col cols="12" md="1"></v-col>
-      <v-col cols="12" md="3">
+      <v-col v-if="!short" cols="10" md="1">
+        <v-btn color="accent" type="submit" dark fab>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+      </v-col>
+      <v-col cols="10" md="1"></v-col>
+      <v-col cols="6" md="3" max-width="200px">
         <v-tooltip slot="append" v-model="showCityHint" :top="!short" :bottom="short">
           <template #activator="{}">
             <city-select ref="citySelect" v-model="city" :dense="short" @input="onCityChange"></city-select>
@@ -12,14 +17,14 @@
         </v-tooltip>
 
       </v-col>
-      <v-col cols="12" md="3">
+      <v-col cols="10" md="2">
         <v-menu
           ref="menuDateFrom"
           v-model="menuDateFrom"
           :close-on-content-click="false"
           transition="scale-transition"
           offset-y
-          max-width="290px"
+          max-width="200px"
           min-width="auto"
         >
           <template #activator="{ on, attrs }">
@@ -46,14 +51,14 @@
           ></v-date-picker>
         </v-menu>
       </v-col>
-      <v-col cols="12" md="3">
+      <v-col cols="10" md="2">
         <v-menu
           ref="menuDateTo"
           v-model="menuDateTo"
           :close-on-content-click="false"
           transition="scale-transition"
           offset-y
-          max-width="290px"
+          max-width="200px"
           min-width="auto"
         >
           <template #activator="{ on, attrs }">
@@ -77,12 +82,43 @@
           ></v-date-picker>
         </v-menu>
       </v-col>
-      <v-col v-if="!short" cols="12" md="1">
+      <v-col cols="10" md="2">
+        <v-menu
+          ref="menuDateTo"
+          v-model="menuDateTo"
+          :close-on-content-click="false"
+          transition="scale-transition"
+          offset-y
+          max-width="200px"
+          min-width="auto"
+        >
+          <template #activator="{ on, attrs }">
+            <v-text-field
+              v-model="dateToFormatted"
+              label="Сколько гостей"
+              :prepend-icon="short ? '' : 'mdi-calendar'"
+              v-bind="attrs"
+              filled
+              rounded
+              solo
+              :dense="short"
+              @blur="dateTo = parseDate(dateToFormatted)"
+              v-on="on"
+            ></v-text-field>
+          </template>
+          <v-date-picker
+            v-model="dateTo"
+            no-title
+            @input="menuDateTo = false"
+          ></v-date-picker>
+        </v-menu>
+      </v-col>
+<!--      <v-col v-if="!short" cols="12" md="1">
         <v-btn color="accent" type="submit" dark fab>
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
-      </v-col>
-      <v-col cols="12" md="1"></v-col>
+      </v-col>-->
+      <v-col cols="10" md="1"></v-col>
     </v-row>
   </v-form>
 </template>

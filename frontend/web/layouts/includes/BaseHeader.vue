@@ -28,7 +28,7 @@
               id="logo"
             ></v-img>
           </v-btn>
-<!--          <v-spacer />-->
+          <v-spacer />
 
           <div
             class="header__date__container"
@@ -76,16 +76,16 @@
               height="24px"
               class="header__date__container-column">
               3 гостя, 1 питомец
-            </div>
+            </div></div>
             <small-search-form
               v-if="search"
               class="align-content-center"
               short
               hidden
             ></small-search-form>
-          </div>
 
-<!--          <v-spacer />-->
+
+          <v-spacer />
           <div class="btn__container">
             <v-btn
               width="186px"

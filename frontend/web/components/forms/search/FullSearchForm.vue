@@ -69,7 +69,6 @@
             v-show="item.primary"
             :key="item.id"
             :value="item.id"
-
             class="header_button"
           >{{ item.title }}
           </v-chip>
@@ -242,24 +241,24 @@ export default {
       ],
       optionsList: [
         { id: '1', name: 'wifi', title: 'Бесплатная отмена', order: -1, primary: true },
-        { id: '9', name: 'kam', title: 'Мгновенное подтверждение', order: 0, primary: true },
+        { id: '2', name: 'kam', title: 'Мгновенное подтверждение', order: 0, primary: true },
         {
-          id: '2',
+          id: '3',
           name: 'cond',
           title: 'Суперхозяин',
           order: 1,
           primary: true,
         },
         {
-          id: '3',
+          id: '4',
           name: 'stir',
           title: 'Горящее предложение',
           order: 2,
-          primary: false,
+          primary: true,
         },
-        { id: '4', name: 'utug', title: 'И ещё что-нибудь', order: 3, primary: true },
-        { id: '5', name: 'fen', title: 'Что-то ещё', order: 4, primary: true },
-        { id: '6', name: 'kuh', title: 'И ещё что-то длинное длинное', order: 5, primary: true }
+        { id: '5', name: 'utug', title: 'И ещё что-нибудь', order: 3, primary: true },
+        { id: '6', name: 'fen', title: 'Что-то ещё', order: 4, primary: true },
+        { id: '7', name: 'kuh', title: 'И ещё что-то длинное длинное', order: 5, primary: true }
       ],
       rules: [
         {

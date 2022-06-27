@@ -1,92 +1,4 @@
-<template>
-  <v-app light>
-    <v-app-bar
-      color="#EBEBEC"
-      fixed
-      width="100%"
-      height="180px"
-      elevation="0"
-      flex
-      id="app__header">
-      <base-header
-        search />
-      <full-search-form></full-search-form>
-    </v-app-bar>
 
-    <v-main app class="pa0">
-      <Nuxt />
-    </v-main>
-    <v-footer
-      padless
-      fixed
-    >
-      <v-row>
-        <ul class="footer-nav">
-          <li><a>О проекте</a></li>
-          <li><a>Руководство</a></li>
-          <li><a>Правила</a></li>
-          <li><a>Помощь</a></li>
-        </ul>
-      </v-row>
-      <v-row class="footer-line"></v-row>
-      <v-row class="footer-social">
-        <a class="footer-social-btn">
-          <img src="/facebook.svg">
-        </a>
-        <a class="footer-social-btn">
-          <img src="/twitter.svg">
-        </a>
-        <a class="footer-social-btn">
-          <img src="/telegram.svg">
-        </a>
-      </v-row>
-      <v-row
-        justify="center footer-logo"
-        no-gutters
-      >
-          {{ new Date().getFullYear() }} © ООО “Понаехали”
-      </v-row>
-    </v-footer>
-  </v-app>
-</template>
-
-<script>
-import FullSearchForm from '../components/forms/search/FullSearchForm'
-import BaseHeader from './includes/BaseHeader'
-export default {
-  name: 'SearchLayout',
-  components: { BaseHeader, FullSearchForm},
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-    }
-  },
-  computed: {
-    isFullPage() {
-      return (
-        this.$route.matched.map((r) => {
-          return r.components.default.options.isFullPage
-        })[0] || false
-      )
-    },
-  },
-}
-</script>
-<style>/*
 .v-toolbar__content, .v-toolbar__extension{
 
   display: flex!important;
@@ -149,11 +61,11 @@ footer .row ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 28px;
-  !*margin-right: 36px;*!
+  /*margin-right: 36px;*/
 }
 
 .footer-nav li a:last-child {
- !* margin-right: 31px;*!
+  /* margin-right: 31px;*/
 }
 
 .footer-social {
@@ -262,8 +174,7 @@ footer .row + .row {
 
 
 }
-!*
+/*
 по умолчанию:
 @media screen and (max-width: 2500px)
-*!*/
-</style>
+*/

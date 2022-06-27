@@ -1,8 +1,7 @@
 <template>
-  <v-container fluid pa-0 class="search__container">
-    <v-row class="search__container__row">
-      <v-col>
-        <v-list class="objects-container">
+  <v-container fluid pa-0 class="search__container__row ma-0">
+      <v-col class="align-start objects__container__wrap">
+        <v-list >
           <v-list-item v-for="i in 10"
                        :key="i"
                        class="">
@@ -12,38 +11,36 @@
             <v-btn
               width="210px"
               height="32px"
-              color="rgba(0,172,162,1)"
+              text-color="#FFFBF9"
+              color="#00ACA2"
+              id="see_all__button"
               >
               <v-icon
-              width="16px"
-              height="16px"
+              max-width="16px"
+              max-height="16px"
               >mdi-plus</v-icon>
               Показать ещё
             </v-btn>
           </v-row>
-          <v-row class="pagination">
-              <v-pagination
-                v-model="page"
-                :length="3"
-                :total-visible="3"
-                circle
-                color="#00ACA2"
-                text-color="white"
-              ></v-pagination>
-          </v-row>
+
         </v-list>
+        <v-row class="pagination ma-0">
+          <v-pagination
+            v-model="page"
+            :length="3"
+            :total-visible="3"
+            circle
+            color="#00ACA2"
+            text-color="white"
+          ></v-pagination>
+        </v-row>
       </v-col>
 
       <v-col
-        cols="12"
-        md="6"
-        lg="7"
-        xl="8"
-        class="flex-column align-end search__container__row__map"
+        class="align-end search__container__row__map"
       >
         <search-map @update:bounds="updateMapBoundsHandler"></search-map>
       </v-col>
-    </v-row>
   </v-container>
 
 </template>
@@ -80,7 +77,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+/*
 
 .v-pagination__item {
   background: transparent!important;
@@ -263,12 +261,12 @@ export default {
 
   }
 
-/*  .objects-container .v-list-item {
+!*  .objects-container .v-list-item {
     width: 482px;
     height: 177px;
     margin-bottom: 20px;
 
-  }*/
+  }*!
   .pagination {
     width: 522px;
   }
@@ -293,14 +291,14 @@ export default {
   }
 
 }
-/*
+!*
 по умолчанию:
 @media screen and (max-width: 2500px)
-*/
+*!
 
 @media screen and (min-width: 1921px) and (min-width: 2500px) {
   .see_all {
-    display: none;
+    display: none!important;
   }
   .search__container__row__map {
     width: 67%;
@@ -309,4 +307,6 @@ export default {
     width: 33%!important;
   }
 }
+*/
+
 </style>
