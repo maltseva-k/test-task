@@ -71,7 +71,10 @@
 
   }
   @media screen and (min-width: 480px) and (max-width: 1023px) {
-
+    max-width: 100%!important;
+    height: 100%;
+    padding-top: 120px!important;
+    padding-bottom: 128px!important;
   }
   @media screen and (max-width: 1023px) {
     width: 100% !important;

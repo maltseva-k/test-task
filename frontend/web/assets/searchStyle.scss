@@ -1,4 +1,18 @@
+/* @media screen and (min-width: 320px) and (max-width: 479px) {
 
+}
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+
+}
+@media screen and (min-width: 1920px) and (max-width: 2499px) {
+
+}
+@media screen and (min-width: 2500px) {
+
+} */
 .v-toolbar__content, .v-toolbar__extension{
 
   display: flex!important;
@@ -10,7 +24,7 @@
 
 footer {
   background-color: #EBEBEC;
-  width: 100%;
+  width: 100% !important;
   height: 128px;
   display: flex;
   justify-content: center;
@@ -118,7 +132,7 @@ footer .row + .row {
   margin-right: auto;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   footer {
     align-items: start!important;
   }
@@ -161,20 +175,10 @@ footer .row + .row {
     margin: 0 auto 0 0;
   }
 }
-@media screen and (min-width: 331px) and (max-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 1023px) {
   .footer-line {
     height: 1px;
     width: 300px;
   }
 }
-@media screen and (max-width: 1024px) {
 
-}
-@media screen and (max-width: 1920px) {
-
-
-}
-/*
-по умолчанию:
-@media screen and (max-width: 2500px)
-*/

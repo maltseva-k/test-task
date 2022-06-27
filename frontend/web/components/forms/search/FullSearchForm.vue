@@ -7,7 +7,7 @@
     class="header-filters"
   >
     <div class="options__wrap">
-      <v-conteiner fluid class="select__wrap">
+      <v-container fluid class="select__wrap">
         <v-select
           v-model="filters.houseType"
           :items="houseTypes"
@@ -61,7 +61,7 @@
           class="full_search__panel__select--house-types"
         >
         </v-select>
-      </v-conteiner>
+      </v-container>
       <v-sheet elevation="0" class="chip__wrap">
         <v-chip-group v-model="filters.options" multiple class="">
           <v-chip

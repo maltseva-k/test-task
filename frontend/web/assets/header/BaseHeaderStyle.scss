@@ -1,43 +1,6 @@
 
-.v-toolbar__content, .v-toolbar__extension{
-
-  display: flex!important;
-  flex-direction: column!important;
-  padding: 0;
 
 
-}
-
-.header-search {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-}
-
-.header-search .col {
-  padding: 14px 12px;
-  max-width: 612px;
-}
-
-.header__date__container {
-  width: 612px;
-  height: 52px;
-  background-color: rgba(255,251,249,1);
-  padding: 14px 12px;
-  margin: 22px 0 28px 0;
-  border-radius: 12px;
-  border: none;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 16px 170.67px 1px 170.67px 1px 170.67px;
-  gap: 12px;
-  /*  display: flex;
-    justify-content: space-between;
-    gap:0;*/
-
-}
 
 .header__date__container .col {
 
@@ -51,14 +14,7 @@
 
 
 
-.header__date__container-column {
-  text-align: center;
-  width: 170.67px;
-  color: rgba(55, 55, 58, 1);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
+
 
 .vertical__line {
   background-color: rgba(175, 175, 176, 1);
@@ -71,9 +27,7 @@
 }
 
 
-.logo__btn {
-  margin: 26px 860px 27px 26px;
-}
+
 
 
 .btn__container {
@@ -115,12 +69,19 @@
 
 .header-filters {
   width: 100%;
+  height: 78px!important;
   padding-right: 274px;
   padding-left: 20px;
   padding-bottom: 22px;
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    height: 45px!important;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    height: 49px!important;
+  }
 }
 
 .header__select {
@@ -173,10 +134,7 @@
   color: #FFFBF9;
 }
 @media screen and (max-width: 320px) {
-  #app__header {
-    width: 320px;
-    height: 130px!important;
-  }
+
 
   #menu_burger {
     display: flex;
@@ -185,12 +143,7 @@
 
   }
 
-  .logo__btn {
-    margin-right: 10px !important;
-    margin-left: 12px !important;
-    width: 36px !important;
-    height: 36px !important;
-  }
+
 
   #logo {
     display: none;
@@ -220,49 +173,29 @@
     margin-bottom: 12px;
   }
   .header__date__container {
-    width: 250px!important;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    grid-template-columns: 16px 49px 1px 70px 1px 31px!important;
-    height: 32px;
-    text-align: center;
-    padding: 3px 3px!important;
-    font-size: 80%;
-    margin-top: 13px;
-    margin-bottom: 10px;
+
 
 
   }
-  .header__date__container-column {
-    width: 104px;
-    font-size: 90%;
-  }
+
   .header-filters {
     padding: 0;
   }
   .options__wrap {
     width: 0;
   }
-  .header-search {
+/*  .header-search {
     justify-content: start;
-  }
+  }*/
 }
 @media screen and (min-width: 321px) and (max-width: 480px) {
-  #app__header {
-    width: 480px;
-  }
   #menu_burger {
     display: flex;
     width: 36px;
     height: 36px;
 
   }
-  .logo__btn {
-    margin-right: 16px!important;
-    margin-left: 20px!important;
-    width: 36px!important;
-    height: 36px!important;
-  }
+
   #logo {
     display: none;
   }
@@ -297,41 +230,27 @@
 
   }
   .header__date__container {
-    width: 388px!important;
-    grid-template-columns: 16px 104px 1px 82px 1px 98px!important;
-    height: auto;
-    text-align: center;
-    padding: 3px 3px!important;
-    font-size: 80%;
-    margin-top: 25px;
-    margin-bottom: 18px;
+
 
 
   }
-  .header__date__container-column {
-    width: 104px;
-    font-size: 90%;
-  }
+
   .header-filters {
     padding: 0;
   }
-  .header-search {
+/*  .header-search {
     justify-content: start;
     align-items: center;
     gap: 0;
-  }
+  }*/
   .vertical__line {
     margin-left: 16px;
     margin-right: 16px;
   }
-  .logo__btn {
-    margin: 22px 8.1% 15px 42px;
-  }
 
 
-  .header__date__container-column:first-child {
-    width: 16px;
-  }
+
+
   .header__date__container .vertical__line {margin: 0}
 
   .btn__container {
@@ -361,33 +280,20 @@
     gap: 0;
 
   }
-  .header-search {
+/*  .header-search {
     justify-content: start;
     gap: 0;
-  }
+  }*/
   .vertical__line {
     margin-left: 16px;
     margin-right: 16px;
   }
-  .logo__btn {
-    margin: 22px 8.1% 15px 42px;
-  }
+
   .header__date__container {
-    width: 481px!important;
-    grid-template-columns: 16px 119px 1px 119px 1px 119px!important;
-    height: 52px;
-    padding: 6px 6px!important;
-
 
 
   }
-  .header__date__container-column {
-    width: 119px;
-    letter-spacing: 0.005em;
-    vertical-align: middle;
 
-
-  }
   .header__date__container-column:first-child {
     width: 16px;
   }
@@ -407,11 +313,249 @@
   #btn_5, #btn_6, #btn_7{
     display: none;
   }
-  .logo__btn {
-    margin: 22px 18% 15px 42px;
-  }
   .btn__container {
     margin-left: 1.75%;
   }
 }
 
+
+.header-search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    height: auto!important;
+
+  }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    gap:0px;
+    justify-content: start;
+    height: auto!important;
+
+
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1919px) {
+
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2499px) {
+
+  }
+  @media screen and (min-width: 2500px) {
+
+  }
+}
+
+
+#app__header {
+  width: 100%;
+   @media screen and (min-width: 320px) and (max-width: 479px) {
+    height: 100px!important;
+   }
+   @media screen and (min-width: 480px) and (max-width: 1023px) {
+     height: 120px!important;
+   }
+   @media screen and (min-width: 1024px) and (max-width: 1919px) {
+     height: 180px!important;
+   }
+   @media screen and (min-width: 1920px) and (max-width: 2499px) {
+     height: 180px!important;
+   }
+   @media screen and (min-width: 2500px) {
+     height: 180px!important;
+   }
+ }
+ #app__header .v-toolbar__content {
+  width: 100%;
+  padding: 0!important;
+
+}
+
+ #app__header .v-toolbar__items {
+
+ }
+
+/*
+.logo__btn {
+  margin: 26px 860px 27px 26px;
+}
+
+.logo__btn {
+  margin-right: 10px !important;
+  margin-left: 12px !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.logo__btn {
+  margin-right: 16px!important;
+  margin-left: 20px!important;
+  width: 36px!important;
+  height: 36px!important;
+}*/
+
+#app__header .logo__btn {
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    margin-left: 12px;
+    width: 36px!important;
+    height: 36px!important;
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    margin-left: 20px;
+    width: 36px!important;
+    height: 36px!important;
+    margin-right: 16px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1919px) {
+    margin-left: 42px;
+    width: 64px;
+    height: 49px;
+    margin-right: 82px;
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2499px) {
+    margin-left: 20px;
+    width: 64px;
+    height: 49px;
+    margin-right: 570px;
+  }
+  @media screen and (min-width: 2500px) {
+    margin-left: 20px;
+    width: 64px;
+    height: 49px;
+    margin-right: 860px;
+
+
+  }
+  .v-btn__content {
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      margin-left: 0px;
+      width: 36px;
+      height: 36px;
+      margin-right: 0px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1023px) {
+      margin-left: 0px;
+      width: 36px!important;
+      height: 36px;
+      margin-right: 0px;
+    }
+  }
+}
+
+#app__header .btn__container {
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    display: none;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    display: none;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1919px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2499px) {
+    margin-left: 336px;
+    margin-right: 20px;
+  }
+  @media screen and (min-width: 2500px) {
+    margin-left: 531px;
+    margin-right: 20px;
+
+  }
+  .header__button {
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+
+    }
+    @media screen and (min-width: 480px) and (max-width: 1023px) {
+
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1919px) {
+      width: 148px!important;
+    }
+    @media screen and (min-width: 1920px) and (max-width: 2499px) {
+      width: 138px!important;
+    }
+    @media screen and (min-width: 2500px) {
+      width: 187px!important;
+
+    }
+  }
+}
+
+
+.header__date__container {
+  text-align: center;
+  width: 612px;
+  height: 52px;
+  background-color: rgba(255,251,249,1);
+  padding: 14px 12px;
+  margin: 22px 0 28px 0;
+  border-radius: 12px;
+  border: none;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 16px 170.67px 1px 170.67px 1px 170.67px;
+  gap: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    .header__date__container-column {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    width: 250px!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-template-columns: 16px 49px 1px 70px 1px 31px!important;
+    height: 32px;
+    text-align: center;
+    padding: 3px 3px!important;
+    font-size: 12px!important;
+    line-height: 20px;
+    letter-spacing: 0.004em;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    gap: 12px!important;
+    white-space: nowrap;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    margin: 27px 0 12px 0;
+    font-weight: 400;
+    font-size: 14px!important;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+    min-width: 388px!important;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    width: 388px!important;
+    grid-template-columns: 16px 104px 1px 82px 1px 98px!important;
+    height: auto;
+    text-align: center;
+    padding: 3px 3px!important;
+    font-size: 80%;
+    margin-top: 25px;
+    margin-bottom: 18px;
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1919px) {
+    width: 481px!important;
+    grid-template-columns: 16px 119px 1px 119px 1px 119px!important;
+    height: 52px;
+    padding: 6px 6px!important;
+
+
+  }
+  @media screen and (min-width: 1920px) and (max-width: 2499px) {
+
+  }
+  @media screen and (min-width: 2500px) {
+
+
+  }
+
+
+}
